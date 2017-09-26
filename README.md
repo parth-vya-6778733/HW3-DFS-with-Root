@@ -1,6 +1,9 @@
 Homework 3: Readme.txt
 DFS Spanning Tree
 
+Java Source Files are in the following directory:
+[a link](https://github.com/parth-vya-6778733/HW3-DFS-with-Root/tree/master/dfsSpanningTree/edu/dt)
+
 Introduction: The following Java program represents a Depth First Search(DFS) Spanning tree of a given graph. A DFS spanning tree is a result of traversing through a given graph or tree using Depth-First Search algorithm. 
 
 Depth-First Search:
