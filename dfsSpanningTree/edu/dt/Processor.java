@@ -47,11 +47,6 @@ public class Processor implements Observer {
         if(!unexplored.isEmpty()) {
             unexplored.remove(p);
         }
-//        for (Processor u : unexplored) {
-//            System.out.println("Unexplored Nodes After Removal: " + u.id);
-//        }
-//        System.out.println("Removed Node: " + p.id);
-//        System.out.println("From Node: " + this.id);
     }
 
     /**
@@ -63,9 +58,6 @@ public class Processor implements Observer {
     //Other processors will invoke this method to send a message to this Processor
     public void sendMessgeToMyBuffer(Message message, Processor pj){
     	this.pj = pj;
-//    	System.out.println("Pi/this: " + this.id);
-//        System.out.println("Pj: " + pj.id);
-//        System.out.println("Message: " + message);
         messageBuffer.setMessage(message);
         
     }
@@ -107,10 +99,6 @@ public class Processor implements Observer {
                     if(pj.parent == this) {
                         this.children.add(pj);
                         System.out.println("Parent Node: " + this.id);
-
-//                        for (Processor u : unexplored) {
-//                            System.out.println("Unexplored Nodes: " + u.id);
-//                        }
                         for (Processor c : children) {
                             System.out.println("Child: " + c.id);
                         }
@@ -131,7 +119,6 @@ public class Processor implements Observer {
         {
 
         	Processor ptemp = unexplored.get(0);
-//            System.out.println("Next Node: " + ptemp.id);
         	removeFromUnexplored(unexplored.get(0));
             ptemp.sendMessgeToMyBuffer(Message.M,this);
         }
@@ -143,7 +130,6 @@ public class Processor implements Observer {
             }
             else
             {
-                //print out root id
                 System.out.println("Root: " + this.id);
             }
         }
